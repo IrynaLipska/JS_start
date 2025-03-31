@@ -108,10 +108,10 @@
 // Задача 5.
 // Задано координати двох точок на площині. Знайти координати середини відрізка, що їх сполучає.
 
-let x1 = +prompt(`x1 = `);
-let x2 = +prompt(`x2 = `);
-let y1 = +prompt(`y1 = `);
-let y2 = +prompt(`y2 = `);
+// let x1 = +prompt(`x1 = `);
+// let x2 = +prompt(`x2 = `);
+// let y1 = +prompt(`y1 = `);
+// let y2 = +prompt(`y2 = `);
 
 // function calcMidpoint(x1, x2, y1, y2) {
 //     let x = (x1 + x2) / 2;
@@ -123,12 +123,49 @@ let y2 = +prompt(`y2 = `);
 // alert(`Midpoint is (${midpoint.x}, ${midpoint.y})`);
 
 // ------------------- 2 var
-const calcMidpoint = ([x1, y1], [x2, y2]) => ({
-    x : ((x1 + x2) / 2),    //об'єкт (ключ: значення)
-    y : ((y1 + y2) / 2)
-});
+// const calcMidpoint = ([x1, y1], [x2, y2]) => ({
+//     x : ((x1 + x2) / 2),    //об'єкт (ключ: значення)
+//     y : ((y1 + y2) / 2)
+// });
 
-const midpoint = calcMidpoint([x1, y1], [x2, y2]);
-alert(`Midpoint is (${midpoint.x}, ${midpoint.y})`);
+// const midpoint = calcMidpoint([x1, y1], [x2, y2]);
+// alert(`Midpoint is (${midpoint.x}, ${midpoint.y})`);
 
+// Задача 6.
+// Задано довжини двох сторін трикутника та кут між ними (кут задано в радіанах). Знайти площу
+// трикутника.
 
+function calcTriangleArea(a, b, angle) {
+    const area = a * b * Math.sin(angle) / 2;
+    console.log(area);
+}
+calcTriangleArea(2, 3, 0.5);
+
+//Задача 10*.
+// Переставити місцями значення двох змінних, не використовуючи допоміжну змінну.
+
+// function exercise10(num1, num2) {
+//     let a = num1;
+//     let b = num2;
+//     a = a + b;
+//     b = a - b;
+//     a = a - b;
+//     console.log(a, b);
+//     }
+
+// В JavaScript, існує можливість поміняти значення двох змінних між собою, без створення додаткової
+// змінної чи додаткової маніпуляції зі значеннями, тому дана задача мовою JavaScript розв’язується
+// простіше.
+// Алгоритм:
+// 1. Початок
+// 2. Ввести з клавіатури a, b
+// 3. Поміняти змінні між собою, [a, b] = [b, a]
+// 4. Вивести на екран значення a та b
+// 5 Кінець
+
+function exercise10(num1, num2) {
+    let a = num1;
+    let b = num2;
+    [a, b] = [b, a];
+    console.log(a, b);
+    }
