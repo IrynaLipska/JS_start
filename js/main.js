@@ -98,9 +98,37 @@
 // Задача 4.
 // Задано радіус кола (дійсне число). Знайти довжину сторони квадрата, вписаного в це коло
 
-let radius = +prompt(`Radius = `);
-function calcSideSquare(radius) {
-    side = (radius * 2) / Math.sqrt(2);
-    return side;
-}
-alert(`the side of the square ${calcSideSquare(radius)}`);
+// let radius = +prompt(`Radius = `);
+// function calcSideSquare(radius) {
+//     side = (radius * 2) / Math.sqrt(2);
+//     return side;
+// }
+// alert(`the side of the square ${calcSideSquare(radius)}`);
+
+// Задача 5.
+// Задано координати двох точок на площині. Знайти координати середини відрізка, що їх сполучає.
+
+let x1 = +prompt(`x1 = `);
+let x2 = +prompt(`x2 = `);
+let y1 = +prompt(`y1 = `);
+let y2 = +prompt(`y2 = `);
+
+// function calcMidpoint(x1, x2, y1, y2) {
+//     let x = (x1 + x2) / 2;
+//     let y = (y1 + y2) / 2;
+// return {x, y};
+// }
+
+// let midpoint = calcMidpoint(x1, x2, y1, y2);
+// alert(`Midpoint is (${midpoint.x}, ${midpoint.y})`);
+
+// ------------------- 2 var
+const calcMidpoint = ([x1, y1], [x2, y2]) => ({
+    x : ((x1 + x2) / 2),    //об'єкт (ключ: значення)
+    y : ((y1 + y2) / 2)
+});
+
+const midpoint = calcMidpoint([x1, y1], [x2, y2]);
+alert(`Midpoint is (${midpoint.x}, ${midpoint.y})`);
+
+
