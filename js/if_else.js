@@ -80,8 +80,22 @@ checkNum(0);
 // ні.
 
 // const checkWorkers = (expirence, age) => {
-//     if(expirence >= 5 && age < 40) return console.log('You are Ok!');
+//     if(expirence >= 5 && age <= 40) return console.log('You are Ok!');
 //     return console.log('You are not Ok!');
 // }
 // checkWorkers(10, 20);
 // checkWorkers(6, 55);
+
+// 2)
+
+function expirenceAgeWorker(expirence, age) {
+    let res;
+    if(expirence>= 5 && age <= 40) {
+        res = 'Candidate is suitable';
+    } else {
+        res = 'Candidate is not suitable'
+    }
+    console.log(res);
+}
+expirenceAgeWorker(3, 25);
+expirenceAgeWorker(10, 30);
