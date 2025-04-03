@@ -99,3 +99,48 @@ function expirenceAgeWorker(expirence, age) {
 }
 expirenceAgeWorker(3, 25);
 expirenceAgeWorker(10, 30);
+
+// Задача 5
+// Дано три числа a, b, c. Змінній m присвоїти значення найбільшого з трьох чисел
+
+// let num1 = +prompt("Enter num1:");
+// let num2 = +prompt("Enter num2:");
+// let num3 = +prompt("Enter num4:");
+// let numMax = 0;
+
+// function numMaxRes(num1, num2, num3) {
+//     if (num1 >= num2) {
+//         numMax = num1;
+//     } else {
+//         numMax = num2;
+//     }
+//     if (numMax < num3) {
+//         numMax = num3
+//     }
+//     return alert(`Max number is ${numMax}`)
+// }
+// numMaxRes(num1, num2, num3);
+
+// 2: Тернарний оператор -----------------------
+
+// let num1 = +prompt("Enter num1:");
+// let num2 = +prompt("Enter num2:");
+// let num3 = +prompt("Enter num3:");
+
+// const numMaxRes = (num1, num2, num3) => {
+//     let numMax = num1 >= num2 ? num1 : num2;
+//     numMax = numMax >= num3 ? numMax : num3;
+//     alert(`Max number is ${numMax}`);
+// };
+
+// numMaxRes(num1, num2, num3);
+
+// 3. Math.max (Найпростіший)-----------------
+
+// let num1 = +prompt("Enter num1:");
+// let num2 = +prompt("Enter num2:");
+// let num3 = +prompt("Enter num3:");
+
+// const numMaxRes = (num1, num2, num3) => alert(`Max number is ${Math.max(num1, num2, num3)}`);
+
+// numMaxRes(num1, num2, num3);
