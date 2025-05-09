@@ -19,18 +19,16 @@
 // Задача 2
 // Напишіть програму яка перевіряє, чи є введене ціле число додатним, від’ємним, чи це нуль
 
-let num
+let num;
 
 function checkNum(num) {
-    if(num < 0) {
-        console.log(`number is negative`);
-    } else if(num > 0) {
-        console.log(`number is positive`);
-    } else {
-        console.log(`number is zero`);
-
-    }
-    
+  if (num < 0) {
+    console.log(`number is negative`);
+  } else if (num > 0) {
+    console.log(`number is positive`);
+  } else {
+    console.log(`number is zero`);
+  }
 }
 
 checkNum(-5);
@@ -69,7 +67,7 @@ checkNum(0);
 // let age1 = +prompt("Enter age1:");
 // let age2 = +prompt("Enter age2:");
 
-// const compareAge = (age1, age2) => 
+// const compareAge = (age1, age2) =>
 //     alert(age1 > age2 ? "Age1 is older" : age1 < age2 ? "Age2 is older" : "Both are the same age");
 
 // compareAge(age1, age2);
@@ -89,13 +87,13 @@ checkNum(0);
 // 2)
 
 function expirenceAgeWorker(expirence, age) {
-    let res;
-    if(expirence>= 5 && age <= 40) {
-        res = 'Candidate is suitable';
-    } else {
-        res = 'Candidate is not suitable'
-    }
-    console.log(res);
+  let res;
+  if (expirence >= 5 && age <= 40) {
+    res = 'Candidate is suitable';
+  } else {
+    res = 'Candidate is not suitable';
+  }
+  console.log(res);
 }
 expirenceAgeWorker(3, 25);
 expirenceAgeWorker(10, 30);
@@ -103,23 +101,23 @@ expirenceAgeWorker(10, 30);
 // Задача 5
 // Дано три числа a, b, c. Змінній m присвоїти значення найбільшого з трьох чисел
 
-// let num1 = +prompt("Enter num1:");
-// let num2 = +prompt("Enter num2:");
-// let num3 = +prompt("Enter num4:");
-// let numMax = 0;
+let num1 = +prompt('Enter num1:');
+let num2 = +prompt('Enter num2:');
+let num3 = +prompt('Enter num4:');
+let numMax = 0;
 
-// function numMaxRes(num1, num2, num3) {
-//     if (num1 >= num2) {
-//         numMax = num1;
-//     } else {
-//         numMax = num2;
-//     }
-//     if (numMax < num3) {
-//         numMax = num3
-//     }
-//     return alert(`Max number is ${numMax}`)
-// }
-// numMaxRes(num1, num2, num3);
+function numMaxRes(num1, num2, num3) {
+  if (num1 >= num2) {
+    numMax = num1;
+  } else {
+    numMax = num2;
+  }
+  if (numMax < num3) {
+    numMax = num3;
+  }
+  return alert(`Max number is ${numMax}`);
+}
+numMaxRes(num1, num2, num3);
 
 // 2: Тернарний оператор -----------------------
 
@@ -144,3 +142,17 @@ expirenceAgeWorker(10, 30);
 // const numMaxRes = (num1, num2, num3) => alert(`Max number is ${Math.max(num1, num2, num3)}`);
 
 // numMaxRes(num1, num2, num3);
+
+const link = ['google', 'yahoo', 'bing', 'duckduckgo'];
+
+const fullLink = (linkArray) => {
+  const fullLink = [];
+  linkArray.forEach(function (link) {
+    fullLink.push(`https://${link}.com`);
+  });
+  return fullLink;
+};
+console.log(fullLink(link));
+// 2) стрілкова функція-------------------
+// const fullLink = (linkArray) => linkArray.map(link => `https://${link}.com`);
+// console.log(fullLink(link));
