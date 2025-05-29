@@ -145,14 +145,34 @@ numMaxRes(num1, num2, num3);
 
 const link = ['google', 'yahoo', 'bing', 'duckduckgo'];
 
-const fullLink = (linkArray) => {
+const fixFullLink = (linkArray) => {
   const fullLink = [];
   linkArray.forEach(function (link) {
     fullLink.push(`https://${link}.com`);
   });
   return fullLink;
 };
-console.log(fullLink(link));
+console.log(fixFullLink(link));
 // 2) стрілкова функція-------------------
 // const fullLink = (linkArray) => linkArray.map(link => `https://${link}.com`);
 // console.log(fullLink(link));
+
+// Задача 6
+// Напишіть програму, в якій користувач вводить значення температури в градусах Цельсія, і, якщо це
+// значення менше або дорівнює 0, необхідно вивести повідомлення “A cold, isn’t it?”. Якщо ж
+// температура становить більше 0 і менше 10 градусів Цельсія повідомлення буде “Cool”, якщо
+// температура становить від 10 до 20 градусів, виводимо повідомлення “Nice weather we’re having”, у
+// інших випадках повідомлення буде “Too hot, isn’t it?”
+
+let temp = +prompt('Enter temperature in Celsius:');
+function checkTemperature(temp) {
+  if (temp <= 0) {
+    console.log("A cold, isn't it?");
+  } else if (temp > 0 && temp < 10) {
+    console.log('Cool');
+  } else if (temp >= 10 && temp <= 20) {
+    console.log("Nice weather we're having");
+  } else {
+    console.log("Too hot, isn't it?");
+  }
+}
